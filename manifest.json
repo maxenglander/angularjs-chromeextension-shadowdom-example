@@ -1,0 +1,30 @@
+{
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "event.js"
+        ]
+    },
+    "content_scripts": [{
+        "js": [
+            "bower_components/angular/angular.js",
+            "content.js"
+        ],
+        "matches": [
+            "<all_urls>"
+        ],
+        "run_at": "document_end"
+    }],
+    "manifest_version": 2,
+    "name": "angularjs-chromeextension-shadowdom-example",
+    "permissions": [
+        "<all_urls>",
+        "alarms",
+        "tabs"
+    ],
+    "version": "0.0.0",
+    "web_accessible_resources": [
+        "bower_components/angular/angular.js",
+        "view.html"
+    ]
+}
